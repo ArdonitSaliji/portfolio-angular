@@ -1,0 +1,42 @@
+<nav>
+  <a
+    href="#home"
+    title="Home"
+    (click)="scrollTo = 0"
+    class="{{ scrollTo === 0 ? 'active' : '' }}"
+  >
+    <ng-icon name="bootstrapHouse"></ng-icon>
+  </a>
+  <a
+    href="#about"
+    title="About"
+    (click)="scrollTo = 821"
+    class="{{ scrollTo === 821 ? 'active' : '' }}"
+  >
+    <ng-icon name="bootstrapPerson"></ng-icon>
+  </a>
+  <a
+    href="#experience"
+    title="Experiences"
+    (click)="scrollTo = 1481"
+    class="{{ scrollTo === 1481 ? 'active' : '' }}"
+  >
+    <ng-icon name="featherBook"></ng-icon>
+  </a>
+  <a
+    href="#portfolio"
+    title="Portfolio"
+    (click)="scrollTo = 2191"
+    class="{{ scrollTo === 2191 ? 'active' : '' }}"
+  >
+    <ng-icon name="bootstrapHeart"></ng-icon>
+  </a>
+  <a
+    href="#contact"
+    title="Contact"
+    (click)="scrollTo = 3633"
+    class="{{ scrollTo === 3633 ? 'active' : '' }}"
+  >
+    <ng-icon name="bootstrapChatDots"></ng-icon>
+  </a>
+</nav>

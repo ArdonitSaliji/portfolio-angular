@@ -1,0 +1,83 @@
+<section id="portfolio">
+  <h5>My Recent Work</h5>
+  <h2>Portfolio</h2>
+  <div class="container portfolio__container">
+    <article class="portfolio__item" *ngFor="let project of data; let index">
+      <div id="item" class="portfolio__item-img">
+        <ngx-slick-carousel
+          width="100%"
+          height="100%"
+          class="carousel"
+          [config]="slideConfig"
+          #slickModal="slick-carousel"
+        >
+          <div
+            width="100%"
+            height="100%"
+            *ngFor="let image of project.image"
+            ngxSlickItem
+            class="slide"
+          >
+            <img src="{{ image }}" alt="" />
+          </div>
+        </ngx-slick-carousel>
+      </div>
+      <h3>{{ project.title }}</h3>
+      <div class="portfolio__item-cta">
+        <a
+          href="{{ project.github }}"
+          target="_blank"
+          rel="noreferrer"
+          class="btn"
+        >
+          Github
+        </a>
+        <a
+          href="{{ project.demo }}"
+          target="_blank"
+          rel="noreferrer"
+          class="btn btn-primary"
+        >
+          Live Demo
+        </a>
+      </div>
+    </article>
+
+    <div>
+      <!-- <AiOutlineClose class='x' onClick={() => setPopup(false)} color='white' /> -->
+    </div>
+  </div>
+  <p (click)="showMore()" class="show-more">Show More Projects...</p>
+  <div class="more-projects">
+    <div #containerMore class="container portfolio__container more">
+      <article *ngFor="let project of more; let index" class="portfolio__item">
+        <div id="item" class="portfolio__item-img">
+          <ngx-slick-carousel
+            width="100%"
+            height="100%"
+            class="carousel"
+            [config]="slideConfig"
+            #slickModal="slick-carousel"
+          >
+            <div
+              width="100%"
+              height="100%"
+              *ngFor="let image of project.image"
+              ngxSlickItem
+              class="slide"
+            >
+              <img src="{{ image }}" alt="" />
+            </div>
+          </ngx-slick-carousel>
+        </div>
+        <h3>{{ project.title }}</h3>
+        <div class="portfolio__item-cta">
+          <a target="_blank" rel="noreferrer" class="btn"> Github </a>
+          <a target="_blank" rel="noreferrer" class="btn btn-primary">
+            Live Demo
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

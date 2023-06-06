@@ -1,0 +1,40 @@
+<section id='experience'>
+    <h5>What Skills I Have</h5>
+    <h2>My Experience</h2>
+    <div class='container experience__container'>
+        <div class='experience__frontend'>
+            <h3>Frontend Development</h3>
+            <div class='experience__content' >
+               
+                    <article *ngFor="let exp of frontendExp; let index" class='experience__details'>
+                        <ng-icon class='experience__details-icon' name="bootstrapCheckCircleFill"></ng-icon>   
+
+                        <div>
+                           
+                            <ng-container *ngFor="let keyValue of exp | keyvalue">
+                                <h4>{{ keyValue.key}}</h4>
+                            </ng-container>
+
+
+                          
+                        </div>
+                    </article>
+              
+            </div>
+        </div>
+
+        <div class='experience__backend'>
+            <h3>Backend Development</h3>
+            <div class='experience__content'>
+                    <article  *ngFor="let exp of backendExp; let index"  class='experience__details'>
+                        <ng-icon class='experience__details-icon' name="bootstrapCheckCircleFill"></ng-icon>   
+                        <div>
+                            <ng-container *ngFor="let keyValue of exp | keyvalue">
+                                <h4>{{ keyValue.key}}</h4>
+                            </ng-container>
+                        </div>
+                    </article>
+            </div>
+        </div>
+    </div>
+</section>
